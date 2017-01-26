@@ -1,0 +1,113 @@
+﻿<Window x:Class="AVATAR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AVATAR"
+        mc:Ignorable="d"
+        Icon="resources/icon.ico"
+        Title="Avatar" Height="550" Width="1100" ResizeMode="NoResize" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" WindowStyle="None" Background="#FF1C2127" BorderThickness="0">
+
+    <Grid Visibility="Visible">
+        <Image x:Name="background_image" HorizontalAlignment="Left" Height="550" VerticalAlignment="Top" Width="1100" Source="resources/background.jpg" Stretch="Fill"/>
+        <Canvas x:Name="main" Visibility="Visible">
+            <Rectangle x:Name="main_bar" Fill="#FF161A1F" HorizontalAlignment="Left" Height="30" Stroke="Black" VerticalAlignment="Top" Width="1100" StrokeThickness="0" Opacity="0.55" MouseDown="main_bar_MouseDown"/>
+            <Button x:Name="exit_button" Content="X&#xD;&#xA;" HorizontalAlignment="Left" Margin="1072,2,0,0" VerticalAlignment="Top" Width="26" Height="26" RenderTransformOrigin="2.474,-0.294" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontSize="15" Foreground="White" Click="exit_button_Click"/>
+            <Rectangle HorizontalAlignment="Left" Height="520" Margin="0,30,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="250" Opacity="0.2" Fill="#FF161A1F"/>
+            <Button x:Name="minimalize_button" Content="__" HorizontalAlignment="Left" Margin="1040,2,0,0" VerticalAlignment="Top" Width="26" Height="26" RenderTransformOrigin="2.474,-0.294" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontSize="15" Foreground="White" Click="minimalize_button_Click"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="55" Margin="5,5,0,0" VerticalAlignment="Top" Width="240" Stretch="Fill" Source="resources/logo.png"/>
+            <Button x:Name="button1" Content="SOCIAL MEDIA" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top" Width="250" BorderThickness="0" Height="35" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontFamily="/AVATAR;component/resources/#Earth Orbiter" FontSize="25" Foreground="#FF0077EE" Click="button1_Click"/>
+            <Button x:Name="button2" Content="EMAIL ACCOUNTS" HorizontalAlignment="Left" Margin="0,110,0,0" VerticalAlignment="Top" Width="250" BorderThickness="0" Height="35" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontFamily="/AVATAR;component/resources/#Earth Orbiter" FontSize="24" Foreground="#FF0077EE" Click="button2_Click"/>
+            <Button x:Name="button3" Content="GAMES/PLATFORMS" HorizontalAlignment="Left" Margin="0,150,0,0" VerticalAlignment="Top" Width="250" BorderThickness="0" Height="35" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontFamily="/AVATAR;component/resources/#Earth Orbiter" FontSize="21" Foreground="#FF0077EE" Click="button3_Click"/>
+            <Button x:Name="button4" Content="COMMUNICATION" HorizontalAlignment="Left" Margin="0,190,0,0" VerticalAlignment="Top" Width="250" BorderThickness="0" Height="35" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontFamily="/AVATAR;component/resources/#Earth Orbiter" FontSize="23" Foreground="#FF0077EE" Click="button4_Click"/>
+            <Button x:Name="button5" Content="APPLICATIONS" HorizontalAlignment="Left" Margin="0,230,0,0" VerticalAlignment="Top" Width="250" BorderThickness="0" Height="35" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontFamily="/AVATAR;component/resources/#Earth Orbiter" FontSize="25" Foreground="#FF0077EE" Click="button5_Click"/>
+            <Button x:Name="button6" Content="WEBSITES" HorizontalAlignment="Left" Margin="0,270,0,0" VerticalAlignment="Top" Width="250" BorderThickness="0" Height="35" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontFamily="/AVATAR;component/resources/#Earth Orbiter" FontSize="25" Foreground="#FF0077EE" Click="button6_Click"/>
+            <Button x:Name="button7" Content="PAYMENT" HorizontalAlignment="Left" Margin="0,310,0,0" VerticalAlignment="Top" Width="250" BorderThickness="0" Height="35" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontFamily="/AVATAR;component/resources/#Earth Orbiter" FontSize="25" Foreground="#FF0077EE" Click="button7_Click"/>
+            <Button x:Name="button8" Content="OTHER" HorizontalAlignment="Left" Margin="0,350,0,0" VerticalAlignment="Top" Width="250" BorderThickness="0" Height="35" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontFamily="/AVATAR;component/resources/#Earth Orbiter" FontSize="25" Foreground="#FF0077EE" Click="button8_Click"/>
+            <Label x:Name="label" Content="______________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Foreground="#FF0077EE" FontFamily="/AVATAR;component/resources/#Earth Orbiter" FontSize="25" Padding="0" BorderThickness="0" FontWeight="Bold" Canvas.Top="385" Height="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+
+            <Border x:Name="mask" BorderBrush="#ff000000" BorderThickness="50" CornerRadius="40" Height="100" Width="100" Canvas.Left="75" Canvas.Top="415"/>
+
+            <Canvas>
+                <Canvas.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=mask}"/>
+                </Canvas.OpacityMask>
+
+                <Image x:Name="user_name_avatar" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="resources/avatar3.png" Canvas.Left="75" Canvas.Top="415" Stretch="Fill"/>
+            </Canvas>
+
+            <Label x:Name="user_name_label" Content="USERNAME" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Foreground="#FF0077EE" FontFamily="Moon" FontSize="18" HorizontalContentAlignment="Center" Padding="0" FontWeight="Bold" Canvas.Top="520" Height="20"/>
+
+            <ScrollViewer x:Name="scroll_social_media" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="845" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Canvas.Left="255" Canvas.Top="30">
+                <Canvas x:Name="social_media" HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="845" Margin="2,2,0,0" ScrollViewer.CanContentScroll="True"/>
+            </ScrollViewer>
+            <ScrollViewer x:Name="scroll_email_accounts" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="845" Margin="255,30,0,0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <Canvas x:Name="email_accounts" HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="845" Margin="2,2,0,0" ScrollViewer.CanContentScroll="True"/>
+            </ScrollViewer>
+            <ScrollViewer x:Name="scroll_games_platforms" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="845" Margin="255,30,0,0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <Canvas x:Name="games_platforms" HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="845" Margin="2,2,0,0" ScrollViewer.CanContentScroll="True"/>
+            </ScrollViewer>
+            <ScrollViewer x:Name="scroll_communication" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="845" Margin="255,30,0,0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <Canvas x:Name="communication" HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="845" Margin="2,2,0,0" ScrollViewer.CanContentScroll="True"/>
+            </ScrollViewer>
+            <ScrollViewer x:Name="scroll_applications" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="845" Margin="255,30,0,0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <Canvas x:Name="applications" HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="845" Margin="2,2,0,0" ScrollViewer.CanContentScroll="True"/>
+            </ScrollViewer>
+            <ScrollViewer x:Name="scroll_websites" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="845" Margin="255,30,0,0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <Canvas x:Name="websites" HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="845" Margin="2,2,0,0" ScrollViewer.CanContentScroll="True"/>
+            </ScrollViewer>
+            <ScrollViewer x:Name="scroll_payment" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="845" Margin="255,30,0,0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <Canvas x:Name="payment" HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="845" Margin="2,2,0,0" ScrollViewer.CanContentScroll="True"/>
+            </ScrollViewer>
+            <ScrollViewer x:Name="scroll_other" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="845" Margin="255,30,0,0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <Canvas x:Name="other" HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="845" Margin="2,2,0,0" ScrollViewer.CanContentScroll="True"/>
+            </ScrollViewer>
+
+            <Button x:Name="add_button" Content="+" HorizontalAlignment="Left" Margin="1007,2,0,0" VerticalAlignment="Top" Width="26" Height="26" RenderTransformOrigin="2.474,-0.294" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontSize="15" Foreground="White" Click="add_button_Click"/>
+            <Button x:Name="refresh_button" Content="Ơ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="26" Height="26" RenderTransformOrigin="2.474,-0.294" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontSize="15" Foreground="White" Canvas.Left="975" Canvas.Top="2" Click="refresh_button_Click"/>
+            <Image x:Name="log_out_image" Height="28" Canvas.Left="65" Canvas.Top="487" Width="28" Source="resources/log_out.png" Stretch="Fill" ToolTip="Log out this user." MouseLeftButtonDown="log_out_image_MouseLeftButtonDown" MouseEnter="log_out_image_MouseEnter" MouseLeave="log_out_image_MouseLeave"/>
+
+        </Canvas>
+
+        <Canvas x:Name="add_acc" Visibility="Hidden" Width="700" Height="180" Background="#FF200052">
+            <Image x:Name="new_account_image" HorizontalAlignment="Left" Height="130" Margin="10,40,0,0" VerticalAlignment="Top" Width="130" Source="resources/add_account.png" MouseLeftButtonDown="new_account_image_MouseLeftButtonDown" ToolTip="Choose image for your account."/>
+            <Rectangle Fill="#FF161A1F" HorizontalAlignment="Left" Height="30" Stroke="Black" VerticalAlignment="Top" Width="700" StrokeThickness="0"/>
+            <Label x:Name="label_Copy_11" Content="ADD NEW ACCOUNT" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Width="250" Foreground="#FF0077EE" FontFamily="Moon" FontSize="18" Padding="10,0,0,0" FontWeight="Bold"/>
+
+            <Label x:Name="jkjjkvkjbcjv" Content="TITLE:" Canvas.Left="150" Canvas.Top="40" Height="28" FontFamily="/AVATAR;component/resources/#Moon" FontSize="20" Foreground="#FFE71E62" FontWeight="Bold" />
+            <TextBox x:Name="name_textBox" HorizontalAlignment="Left" Height="28" Margin="216,40,0,0" TextWrapping="Wrap" Text="Name of account" VerticalAlignment="Top" Width="474" FontSize="18" Foreground="Black" BorderThickness="1"/>
+            <Label Content="LOGIN:" Height="28" FontFamily="/AVATAR;component/resources/#Moon" FontSize="20" Foreground="#FFE71E62" FontWeight="Bold" Margin="151,75,465,77" />
+            <TextBox x:Name="login_textBox" HorizontalAlignment="Left" Height="28" Margin="240,75,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="450" FontSize="18" Foreground="Black" BorderThickness="1"/>
+            <Label Content="PASSWORD:" Height="28" FontFamily="/AVATAR;component/resources/#Moon" FontSize="20" Foreground="#FFE71E62" FontWeight="Bold" Margin="151,110,415,42" />
+            <TextBox x:Name="password_textBox" HorizontalAlignment="Left" Height="28" Margin="290,110,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="400" FontSize="18" Foreground="Black" BorderThickness="1"/>
+            <Button x:Name="add_account_button" Content="ADD ACCOUNT" HorizontalAlignment="Left" Margin="575,145,0,0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" VerticalAlignment="Top" Width="115" Foreground="White" Height="28" FontSize="14" Click="add_account_button_Click"/>
+            <Button x:Name="close_adding_button" Content="X&#xA;" HorizontalAlignment="Left" Margin="672,2,0,0" VerticalAlignment="Top" Width="26" Height="26" RenderTransformOrigin="2.474,-0.294" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontSize="15" Foreground="White" Click="close_adding_button_Click"/>
+            <Label Content="CATEGORY" Height="28" FontFamily="/AVATAR;component/resources/#Moon" FontSize="20" Foreground="#FFE71E62" FontWeight="Bold" Margin="151,145,415,7" />
+            <ComboBox x:Name="category_comboBox" HorizontalAlignment="Left" Margin="290,145,0,0" VerticalAlignment="Top" Width="280" Height="28" FontSize="18" BorderThickness="1" Foreground="Black" SelectedIndex="0" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" Padding="5,0,0,0">
+                <ListBoxItem Content="SOCIAL MEDIA"/>
+                <ListBoxItem Content="EMAIL ACCOUNTS"/>
+                <ListBoxItem Content="GAMES/PLATFORMS"/>
+                <ListBoxItem Content="COMMUNICATION"/>
+                <ListBoxItem Content="APPLICATIONS"/>
+                <ListBoxItem Content="WEBSITES"/>
+                <ListBoxItem Content="PAYMENT"/>
+                <ListBoxItem Content="OTHER"/>
+            </ComboBox>
+        </Canvas>
+
+        <Canvas x:Name="intro_manual" Width="900" Height="450" Background="#FF200052" Visibility="Hidden">
+            <Rectangle x:Name="manual_bar" Fill="#FF161A1F" HorizontalAlignment="Left" Height="30" Stroke="Black" VerticalAlignment="Top" Width="900" StrokeThickness="0" Opacity="0.55"/>
+            <Label x:Name="label1" Content="INTRODUCTION" Canvas.Left="10" Height="26" Width="120" FontSize="16" Foreground="White" Canvas.Top="2" Padding="0" VerticalContentAlignment="Center" FontFamily="/AVATAR;component/resources/#Moon"/>
+            <Button x:Name="exit_manual_button" Content="X&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="26" Height="26" RenderTransformOrigin="2.474,-0.294" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontSize="15" Foreground="White" Canvas.Left="872" Canvas.Top="2" Click="exit_manual_button_Click"/>
+            <Label x:Name="label2" Content="Hey there!" Canvas.Left="10" Canvas.Top="40" Height="40" Width="120" FontSize="24" Foreground="#FFE71E62" Padding="0" VerticalContentAlignment="Center"/>
+            <Label x:Name="label3" Content="If you are reading this, it means that you decided to trust me and store your accounts in this program." Canvas.Left="10" Canvas.Top="85" Height="40" Width="880" FontSize="18" Foreground="White" Padding="0" VerticalContentAlignment="Center"/>
+            <Label x:Name="label4" Content="Don't worry! This program doesn't send any data to external servers. It's 100% locally stored. And your data is " Canvas.Left="10" Canvas.Top="125" Height="40" Width="880" FontSize="18" Foreground="White" Padding="0" VerticalContentAlignment="Center"/>
+            <Label x:Name="label5" Content="encrypted with AES-256 (just to be sure)." Canvas.Left="10" Canvas.Top="165" Height="40" Width="880" FontSize="18" Foreground="White" Padding="0" VerticalContentAlignment="Center"/>
+            <Label x:Name="label6" Content="If you'll encounter any bugs, feel free to email me with details. Until then, have a nice day! " Canvas.Left="10" Canvas.Top="250" Height="40" Width="880" FontSize="18" Foreground="White" Padding="0" VerticalContentAlignment="Center"/>
+            <Label x:Name="label7" Content="YOSH1M1TZU" Canvas.Left="10" Canvas.Top="345" Height="50" Width="880" FontSize="36" Foreground="#FFE71E62" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontFamily="/AVATAR;component/resources/#Moon"/>
+            <Label x:Name="label8" Content="dev.yosh1m1tzu@gmail.com" Canvas.Left="10" Canvas.Top="395" Height="35" Width="880" FontSize="18" Foreground="White" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+            <Image x:Name="image1" Height="90" Canvas.Left="30" Canvas.Top="340" Width="300" Source="resources/logo.png"/>
+        </Canvas>
+    </Grid>
+</Window>

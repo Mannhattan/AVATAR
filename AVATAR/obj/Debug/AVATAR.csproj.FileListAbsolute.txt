@@ -1,0 +1,16 @@
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\bin\Debug\AVATAR.exe.config
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\bin\Debug\AVATAR.exe
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\bin\Debug\AVATAR.pdb
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\AVATAR.csprojResolveAssemblyReference.cache
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\App.g.cs
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\AVATAR_MarkupCompile.cache
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\AVATAR_MarkupCompile.lref
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\AVATAR.g.resources
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\AVATAR.Properties.Resources.resources
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\AVATAR.csproj.GenerateResource.Cache
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\AVATAR.exe
+c:\users\yosh1m1tzu\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\AVATAR.pdb
+C:\Users\YOSH1M1TZU\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\Avatar_Main.g.cs
+C:\Users\YOSH1M1TZU\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\Avatar_Main.baml
+C:\Users\YOSH1M1TZU\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\Avatar_Login_Register.g.cs
+C:\Users\YOSH1M1TZU\documents\visual studio 2015\AVATAR\AVATAR\obj\Debug\Avatar_Login_Register.baml
